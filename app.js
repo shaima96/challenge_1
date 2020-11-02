@@ -1,31 +1,25 @@
-var wins = [
-    [1, 2, 3], [4, 5, 6], [7, 8, 9],
-    [0, 4, 8], [6, 4, 2], [2, 5, 8],
-    [1, 4, 7], [0, 3, 6]
-];
 
-var options=['X','O'];
-var player=[];
-player[0]="player1";
-player[1]="player2";
-var turn=0;
+var turn = true;
+document.getElementById('game').addEventListener('click', (e) => {
 
-var getCells=document.querySelectorAll(".cell");
+    ////// gets the element 
+    var res = e.target;
+    console.log(res)
 
+    var playerX = document.createTextNode('X');
+    var playerO = document.createTextNode('O');
 
-
-
-// add listner for each square 
-// document.getElementById("game").addEventListener("click", add);
-
-// function add() {
-//     document.getElementById("0").innerHTML = "x";
-//     // document.getElementById("1").innerHTML = "x";
-//     // document.getElementById("2").innerHTML = "O";
-// }
-
-function startGame(){
-    for(var i=0;i<getCells.length;i++){
-        getCells[i].innerText='';
+    if (turn) {
+        res.appendChild(playerX);
+        res.classList.add('playerX')
+        turn = !turn;
     }
-}
+    else {
+
+        res.appendChild(playerO);
+        res.classList.add('playerO')
+        turn = !turn;
+    }
+})
+
+
