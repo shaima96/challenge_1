@@ -1,0 +1,19 @@
+{
+  "name": "challenge_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaima96/challenge_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaima96/challenge_1/issues"
+  },
+  "homepage": "https://github.com/shaima96/challenge_1#readme"
+}
